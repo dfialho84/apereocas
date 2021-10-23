@@ -1,0 +1,21 @@
+version: "3.3"
+
+services:   
+  database:
+    image: mysql:5.7
+    environment: 
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: auth
+    volumes: 
+      - /volumes/mysql/data:/var/lib/mysql
+    ports: 
+      - 3306:3306
+  cas:
+    image: apereo/cas:v6.4.0
+    volumes:
+      - ./volumes/cas/services:/etc/cas/services
+    ports:
+      - 8080:8080
+      - 8443:8443
+    depends_on: 
+      - database 
