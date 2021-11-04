@@ -1,0 +1,18 @@
+{
+    "@class" : "org.apereo.cas.services.RegexRegisteredService",
+    "serviceId" : "^http://servico1.+",
+    "name" : "servico1",
+    "id" : 301,
+    "evaluationOrder" : 11,
+    "properties" : {
+        "@class" : "java.util.HashMap",
+        "jwtAsServiceTicket" : {
+            "@class" : "org.apereo.cas.services.DefaultRegisteredServiceProperty",
+            "values" : [ "java.util.HashSet", [ "true" ] ]
+        },
+        "jwtAsServiceTicketSigningKey" : {
+            "@class" : "org.apereo.cas.services.DefaultRegisteredServiceProperty",
+            "values" : [ "java.util.HashSet", [ "N7CKwvogYX4qhxLslpFk4pJUSaxkIzAJA7N23BwQqavLViCpj1bJLuWZltYzB2la-pAgEYsr31LMvngSP_uKQw" ] ]
+        }
+    }
+}
